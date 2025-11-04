@@ -1,0 +1,77 @@
+{
+  "name": "Speaking",
+  "questions": [
+    {
+      "index": 1,
+      "title": "Expressing Opinions",
+      "prompt": "Your company is considering replacing the cafeteria with quiet study pods. Do you support this change? Explain your opinion with specific reasons and examples.",
+      "prepSeconds": 30,
+      "speakSeconds": 60
+    },
+    {
+      "index": 2,
+      "title": "Describing a Scene",
+      "prompt": "Describe what you see and explain what might be happening. Then suggest two ways the city could improve commuters’ experience.",
+      "image": {
+        "description": "A crowded bus stop in the rain at dusk; an electronic display shows multiple delays; people holding umbrellas, puddles on the ground.",
+        "alt": "Crowded rainy bus stop with delay notice"
+      },
+      "prepSeconds": 30,
+      "speakSeconds": 60
+    },
+    {
+      "index": 3,
+      "title": "Talking about a Personal Experience",
+      "prompt": "Talk about a time when your plans changed unexpectedly. What did you expect, what actually happened, and how did you respond?",
+      "prepSeconds": 30,
+      "speakSeconds": 60
+    },
+    {
+      "index": 4,
+      "title": "Describing a Scene",
+      "prompt": "Describe the situation shown and explain why it matters for the community. Propose two actions the city could take.",
+      "image": {
+        "description": "Neighborhood park with litter near a trash can, a broken bench, and a faded playground sign; few people walking by.",
+        "alt": "Littered park with broken bench"
+      },
+      "prepSeconds": 30,
+      "speakSeconds": 60
+    },
+    {
+      "index": 5,
+      "title": "Giving Advice",
+      "prompt": "A friend is choosing between two apartments: one downtown near work but smaller, and one larger outside the city with a longer commute. Which would you recommend and why?",
+      "prepSeconds": 30,
+      "speakSeconds": 60
+    },
+    {
+      "index": 6,
+      "title": "Dealing with a Difficult Situation",
+      "prompt": "Explain what is happening in the picture and how you would report it to the landlord. Include the steps you would ask them to take.",
+      "image": {
+        "description": "Kitchen sink cabinet open with a visible leaking pipe; a small bucket catching water; towels on the floor.",
+        "alt": "Leaking pipe under kitchen sink"
+      },
+      "prepSeconds": 30,
+      "speakSeconds": 60
+    },
+    {
+      "index": 7,
+      "title": "Dealing with a Difficult Situation",
+      "prompt": "Your neighbor plays loud music late at night. Describe the problem and outline a respectful plan to resolve it, including what you would say and any follow-up steps.",
+      "prepSeconds": 30,
+      "speakSeconds": 60
+    },
+    {
+      "index": 8,
+      "title": "Describing an Unusual Situation",
+      "prompt": "Describe the scene and explain the possible causes of the issue. Suggest two practical solutions for the organizers or vendors.",
+      "image": {
+        "description": "Outdoor farmers’ market with a long line; a sign reads “Card Payments Down—Cash Only”; vendors talking to waiting customers.",
+        "alt": "Farmers’ market line with card payments down"
+      },
+      "prepSeconds": 30,
+      "speakSeconds": 60
+    }
+  ]
+}

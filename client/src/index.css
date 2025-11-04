@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import "tailwindcss";
+@source "../.flowbite-react/class-list.json";
+@plugin "flowbite-react/plugin/tailwindcss";
+@source "../../.flowbite-react/class-list.json";
+@import "flowbite/src/themes/default";
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
+@config "../tailwind.config.js";
+
+@theme {
+  --font-inter: "Inter", sans-serif;
+}
+
+.rounded-r-6xl {
+  border-top-right-radius: 4rem /* 2rem = 32px */;
+  border-bottom-right-radius: 4rem /* 2rem = 32px */;
+}
+
+.w-auth {
+  width: 466px;
+}
+
+.font-sans {
+  font-family: var(--font-inter);
+}
+
+/* In your global CSS file (e.g., App.css or a dedicated styles.css) */
+.react-tel-input .form-control:focus {
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 0 2px var(--tw-ring-color, rgb(56, 116, 213));
+}

@@ -1,0 +1,339 @@
+{
+  "name": "reading",
+  "sectionA": {
+    "passage": "To test new ways of using public space, the city launched a three-month pilot called Car-Free Sundays. Each Sunday from 9 a.m. to 6 p.m., several downtown blocks are closed to private cars. The goal is to reduce traffic noise and air pollution while encouraging people to walk, cycle, and visit local shops. Some merchants worried that delivery trucks wouldn't reach them and that customers buying large items would stay away. In response, the city created an early-morning delivery window before the closure and offered small grants to help businesses rent cargo bike trailers.\n\nAfter the first four Sundays, preliminary data show foot traffic up 23% and noise complaints down 40% during the closure hours. Average sales rose for most cafes, bookstores, and clothing shops, though appliance stores reported little change. One bus route was detoured around the zone, adding about eight minutes to riders' trips. A survey found families and many seniors appreciated the calmer streets, while some commuters disliked the longer bus ride. Next month, council will vote on whether to extend the pilot for a full year and adjust the route for winter conditions.",
+    "passage_questions": [
+      {
+        "question": "What is the main purpose of Car-Free Sundays?",
+        "options": [
+          "Reduce car traffic and boost street activity",
+          "Replace buses with bicycles",
+          "Increase parking revenue",
+          "Close downtown permanently"
+        ],
+        "answer": "A",
+        "answerText": "Reduce car traffic and boost street activity"
+      },
+      {
+        "question": "How did the city address merchants' delivery concerns?",
+        "options": [
+          "Early-morning delivery window and grants for cargo trailers",
+          "Free parking in garages all day",
+          "A weekend tax holiday",
+          "Drone deliveries to rooftops"
+        ],
+        "answer": "A",
+        "answerText": "Early-morning delivery window and grants for cargo trailers"
+      },
+      {
+        "question": "Which result was reported after four Sundays?",
+        "options": [
+          "Noise complaints increased",
+          "Bus rides became eight minutes shorter",
+          "Most shops saw higher sales",
+          "Foot traffic stayed the same"
+        ],
+        "answer": "C",
+        "answerText": "Most shops saw higher sales"
+      },
+      {
+        "question": "According to the survey, who especially enjoyed the calmer streets?",
+        "options": [
+          "Families and seniors",
+          "Only tourists",
+          "Only cyclists",
+          "Commuters on the detoured bus"
+        ],
+        "answer": "A",
+        "answerText": "Families and seniors"
+      },
+      {
+        "question": "What is implied about appliance stores' sales?",
+        "options": [
+          "They rely on car access for heavy purchases",
+          "They were closed on Sundays",
+          "They received the largest grants",
+          "They moved entirely online"
+        ],
+        "answer": "A",
+        "answerText": "They rely on car access for heavy purchases"
+      },
+      {
+        "question": "What is the city council's next step?",
+        "options": [
+          "Vote on a one-year extension with winter adjustments",
+          "Make the closure permanent immediately",
+          "Cancel the program next week",
+          "Expand it citywide without further study"
+        ],
+        "answer": "A",
+        "answerText": "Vote on a one-year extension with winter adjustments"
+      }
+    ],
+    "letter": "Dear Ms. Patel,\n\nI [1] __________ the upcoming Evergreen Book Club meeting scheduled for next Sunday. Due to a recent surge in membership—now thirty-two people—we need a larger room to [2] __________ the extra members and ensure everyone can hear the discussion clearly.\n\nIn addition, I realize this is [3] __________, but the current venue is unavailable next Sunday because of a children’s workshop. Could you please let us know the [4] __________ of the Maple Room on May 18 from 3:00 to 5:00 p.m.? If it’s free, we’ll bring our own name tags and confirm final numbers by Friday. Your help coordinating signage and moving the chairs would be greatly [5] __________.\n\nThank you for supporting community programs like ours. We look forward to your reply.\n\nSincerely,\nJordan Lee\nVolunteer Coordinator, Evergreen Book Club",
+    "letter_questions": [
+      {
+        "index": 1,
+        "options": [
+          "am writing regarding",
+          "write regards",
+          "am wrote regarding",
+          "write in"
+        ],
+        "answer": "A",
+        "answerText": "am writing regarding"
+      },
+      {
+        "index": 2,
+        "options": ["accommodate", "accompany", "accord", "aggregate"],
+        "answer": "A",
+        "answerText": "accommodate"
+      },
+      {
+        "index": 3,
+        "options": [
+          "short notice",
+          "few warnings",
+          "small timing",
+          "low alert"
+        ],
+        "answer": "A",
+        "answerText": "short notice"
+      },
+      {
+        "index": 4,
+        "options": ["availability", "vacancy", "opportunity", "liberty"],
+        "answer": "A",
+        "answerText": "availability"
+      },
+      {
+        "index": 5,
+        "options": [
+          "appreciated",
+          "appreciative",
+          "appreciate",
+          "appreciating"
+        ],
+        "answer": "A",
+        "answerText": "appreciated"
+      }
+    ]
+  },
+  "sectionB": {
+    "email": "Subject: Seattle conference presentation\nTo: Janice Wong <jwong@ubc.ca>\nFrom: Peter Kull <pkull@ubc.ca>\n\nHi Team,\n\nI’m [1] ______ the date of our Customer Support Training workshop. Our external facilitator informed me this morning that she has a scheduling [2] ______ with our original time. To ensure full participation, we will need to [3] ______ the session to next Wednesday, 2–4 p.m. in the Oak Room.\n\nPlease let me know your [4] ______ by end of day, so I can finalize the room booking and send the revised agenda. I’ve attached the updated outline; the content is unchanged, but the order of activities has been adjusted to better fit the new time. Your flexibility is much [5] ______. Thank you for your cooperation.\n\nBest regards,\nMaya Chen\nOperations Coordinator",
+    "email_questions": [
+      {
+        "index": 1,
+        "options": ["confirming", "confirm", "confirmed", "confirmation"],
+        "answer": "B",
+        "answerText": "confirm"
+      },
+      {
+        "index": 2,
+        "options": ["conflict", "confusion", "collision", "contrast"],
+        "answer": "A",
+        "answerText": "conflict"
+      },
+      {
+        "index": 3,
+        "options": ["accelerate", "postpone", "cancel", "compress"],
+        "answer": "B",
+        "answerText": "postpone"
+      },
+      {
+        "index": 4,
+        "options": ["ability", "attendance", "availability", "allowance"],
+        "answer": "C",
+        "answerText": "availability"
+      },
+      {
+        "index": 5,
+        "options": [
+          "appreciative",
+          "appreciation",
+          "appreciated",
+          "appreciating"
+        ],
+        "answer": "C",
+        "answerText": "appreciated"
+      }
+    ],
+    "other_questions": [
+      {
+        "question": "What prompted the change to the workshop schedule?",
+        "options": [
+          "The external facilitator had a scheduling conflict",
+          "The venue is under renovation",
+          "The workshop content changed significantly",
+          "A weather emergency was declared"
+        ],
+        "answerText": "The external facilitator had a scheduling conflict"
+      },
+      {
+        "question": "When and where is the rescheduled workshop?",
+        "options": [
+          "Next Wednesday, 2–4 p.m., in the Oak Room",
+          "Tuesday, 3–5 p.m., in the Maple Room",
+          "Wednesday, 9–11 a.m., in Pine Hall",
+          "Friday, 2–4 p.m., in the Oak Room"
+        ],
+        "answerText": "Next Wednesday, 2–4 p.m., in the Oak Room"
+      },
+      {
+        "question": "What does Maya ask team members to provide by end of day?",
+        "options": [
+          "Their availability",
+          "Their presentation slides",
+          "Their dietary restrictions",
+          "Their equipment requests"
+        ],
+        "answerText": "Their availability"
+      }
+    ]
+  },
+  "sectionC": {
+    "passage": "A. The narwhal is an endangered type of whale found in the frigid waters of the Arctic, extending from Canada through the Norwegian waters to Russia. Narwhal means \"corpse whale\", and it has earned its name because of its mottled dark grey colour. Narwhals are regularly harvested for meat and ivory in northern Canada and Greenland. Narwhals share physical characteristics with Beluga whales, having similar shape and size. Both species lack dorsal fins, have short beaks, rounded heads and a thick layer of blubber to adapt to glacial conditions.\n\nB. The narwhals’ distinctive characteristic lies in the presence of a long 2.5 meter spiralling tusk that protrudes from the males' foreheads, resembling a unicorn. The horn-like formation, however, is a long left tooth. The right tooth remains embedded in the skull and measures roughly 30 centimeters. Female tusks have a more regularly defined morphology. They are much shorter, straighter, and do not collect as much algae on the surface, thus appearing whiter.\n\nC. For hundreds of years the purpose of the tusk on the \"unicorn whale\" has puzzled scientists and local aboriginal elders alike. A northern aboriginal legend explains the narwhal's tusk was created when a woman shooting with a harpoon rope was dragged into the ocean after the harpoon had struck a large narwhal whale. She then was transformed into a narwhal herself, and her hair, which was long and twisted, became the characteristic of the spiral tusk. In academic circles, the tusk remains an evolutionary mystery that defies many of the known principles of mammalian teeth. Preliminary studies suggest the tusk enables whales to determine salinity levels and allows them to detect food in their environment.\n\nD. Narwhal behaviour also intrigues researchers. Males frequently engage in episodes of rubbing their tusks together, or “tusking,” for as-yet unknown reasons. The same behaviour is not observed in the female counterparts or between females and males. Some studies theorize about the possibility of these being mating behaviours aimed at displaying genetic superiority. Support for such a theory, however, has proved scarce since unlike other mammalian species the behaviour is not aggressive. Narwhals are a migratory species. In an attempt to learn about their migration patterns and social behavior, their populations are being observed and recorded through satellite tracking conducted by scientists in Canada and Greenland.\n\nE. Not given in any of the above paragraphs.",
+    "options": ["A", "B", "C", "D", "E"],
+    "passage_questions": [
+      {
+        "index": 1,
+        "question": "___________- 1. The narwhal lives in frigid Arctic waters from Canada through Norway to Russia.",
+        "answer": "A"
+      },
+      {
+        "index": 2,
+        "question": "___________- 2. Narwhals are also referred to as “corpse whale,” i.e., death-like.",
+        "answer": "A"
+      },
+      {
+        "index": 3,
+        "question": "___________- 3. The male’s “horn” is actually a 2.5-metre spiralled left tooth.",
+        "answer": "B"
+      },
+      {
+        "index": 4,
+        "question": "___________- 4. The right tooth remains embedded in the skull and is about 30 cm long.",
+        "answer": "B"
+      },
+      {
+        "index": 5,
+        "question": "___________- 5. The tusk may help whales assess salinity and detect food.",
+        "answer": "C"
+      },
+      {
+        "index": 6,
+        "question": "___________- 6. Males rub tusks together (“tusking”), a behaviour not seen with females.",
+        "answer": "D"
+      },
+      {
+        "index": 7,
+        "question": "___________- 7. Scientists in Canada and Greenland use satellite tracking to study migration.",
+        "answer": "D"
+      },
+      {
+        "index": 8,
+        "question": "___________- 8. The average lifespan of narwhals is provided.",
+        "answer": "E"
+      }
+    ]
+  },
+  "sectionD": {
+    "article_paragraphs": [
+      "Visitors walking through Carleton High School are often surprised when they pass Bradley Gordon's French class and see students riding on exercise bikes and sitting on yoga balls. Is it a French class, or is it a gym class? Well, it's a bit of both!",
+      "Two major concerns in education are childhood obesity and ADHD, or Attention Deficit Hyperactivity Disorder, a disorder that results in restlessness, hyperactivity, and impulsivity. With high rates of obesity and also students struggling with ADHD in classes across the country, Mr. Gordon came up with an innovative intervention to address both. He decided to infuse academic studies with physical activity in his own classroom.",
+      "The idea came to Gordon after a personal experience in university while working on his bachelor's degree. \"I didn't have time to schedule a separate slot for exercise, and my health deteriorated rapidly,\" said Gordon. \"After feeling sick and fatigued for months, I decided to couple my studying with my workouts. To my surprise it proved incredibly helpful. My grades started improving and so did my overall fitness and health.\"",
+      "Gordon implemented the approach with his students to great effect last year. Despite the students' excitement and academic improvement, he met resistance from the school's principal, Dawn Epstein, who was not convinced that academics and physical exercise should be amalgamated. \"Although exercise is certainly important, I didn't think it had any place in academics. I assumed exercise would exacerbate ADHD,” Epstein asserted.",
+      "It turns out Ms. Epstein’s reaction is a common misconception. As Dr. John Ratney, psychiatry professor at Harvard Medical School, explains: “Exercise turns the attention system on, and helps with working memory, prioritizing and sustaining attention.” Sustained physical exertion causes kids to be less impulsive and more prone to learn. That’s precisely what Mr. Gordon found a year into the intervention. “My students’ endurance, both physical and mental, has improved. They are fit, and eager to learn. Even students diagnosed with ADHD have displayed less physical agitation, which has helped them to learn better.” So, when you walk by Mr. Gordon’s class and see bikes spinning, know that minds are at work."
+    ],
+    "article_questions": [
+      {
+        "index": 1,
+        "question": "In Bradley Gordon’s French class, students are often seen ______.",
+        "options": [
+          "playing video games",
+          "riding exercise bikes and sitting on yoga balls",
+          "conducting science experiments",
+          "painting classroom murals"
+        ],
+        "answerText": "riding exercise bikes and sitting on yoga balls"
+      },
+      {
+        "index": 2,
+        "question": "Mr. Gordon decided to ______ academic studies with physical activity.",
+        "options": ["infuse", "separate", "replace", "ignore"],
+        "answerText": "infuse"
+      },
+      {
+        "index": 3,
+        "question": "While at university, Gordon improved his grades and health after coupling his studying with his ______.",
+        "options": ["workouts", "meals", "part-time job", "music lessons"],
+        "answerText": "workouts"
+      },
+      {
+        "index": 4,
+        "question": "Initially, Principal Dawn Epstein was ______ about combining academics and physical exercise.",
+        "options": ["resistant", "supportive", "uninvolved", "enthusiastic"],
+        "answerText": "resistant"
+      },
+      {
+        "index": 5,
+        "question": "Dr. John Ratney explains that exercise turns the attention system on and helps with working memory, ______ attention.",
+        "options": [
+          "prioritizing and sustaining",
+          "reducing and eliminating",
+          "ignoring and delaying",
+          "fragmenting and shortening"
+        ],
+        "answerText": "prioritizing and sustaining"
+      }
+    ],
+    "letter": "Dear Ms. Patel,\n\nI [1] __________ the upcoming Evergreen Book Club meeting scheduled for next Sunday. Due to a recent surge in membership—now thirty-two people—we need a larger room to [2] __________ the extra members and ensure everyone can hear the discussion clearly.\n\nIn addition, I realize this is [3] __________, but the current venue is unavailable next Sunday because of a children’s workshop. Could you please let us know the [4] __________ of the Maple Room on May 18 from 3:00 to 5:00 p.m.? If it’s free, we’ll bring our own name tags and confirm final numbers by Friday. Your help coordinating signage and moving the chairs would be greatly [5] __________.\n\nThank you for supporting community programs like ours. We look forward to your reply.\n\nSincerely,\nJordan Lee\nVolunteer Coordinator, Evergreen Book Club",
+    "letter_questions": [
+      {
+        "index": 1,
+        "options": [
+          "am writing regarding",
+          "write regards",
+          "am wrote regarding",
+          "write in"
+        ],
+        "answer": "A",
+        "answerText": "am writing regarding"
+      },
+      {
+        "index": 2,
+        "options": ["accommodate", "accompany", "accord", "aggregate"],
+        "answer": "A",
+        "answerText": "accommodate"
+      },
+      {
+        "index": 3,
+        "options": [
+          "short notice",
+          "few warnings",
+          "small timing",
+          "low alert"
+        ],
+        "answer": "A",
+        "answerText": "short notice"
+      },
+      {
+        "index": 4,
+        "options": ["availability", "vacancy", "opportunity", "liberty"],
+        "answer": "A",
+        "answerText": "availability"
+      },
+      {
+        "index": 5,
+        "options": [
+          "appreciated",
+          "appreciative",
+          "appreciate",
+          "appreciating"
+        ],
+        "answer": "A",
+        "answerText": "appreciated"
+      }
+    ]
+  }
+}

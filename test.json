@@ -1,0 +1,70 @@
+{
+  "name": "listening",
+  "question_audio": "./public/audios/listening_question.mp3",
+  "question": [
+    {
+      "audio": "./public/audios/sub_listening.mp3",
+      "optionA": "Gate A12",
+      "optionB": "Gate B7",
+      "optionC": "Gate C3",
+      "optionD": "Gate D9",
+      "answer": "B"
+    },
+    {
+      "audio": "./public/audios/sub_listening.mp3",
+      "optionA": "10% off",
+      "optionB": "15% off",
+      "optionC": "20% off",
+      "optionD": "25% off",
+      "answer": "C"
+    },
+    {
+      "audio": "./public/audios/sub_listening.mp3",
+      "optionA": "9:15 AM",
+      "optionB": "10:30 AM",
+      "optionC": "11:45 AM",
+      "optionD": "1:00 PM",
+      "answer": "B"
+    },
+    {
+      "audio": "./public/audios/sub_listening.mp3",
+      "optionA": "Boston",
+      "optionB": "Chicago",
+      "optionC": "Denver",
+      "optionD": "Seattle",
+      "answer": "D"
+    },
+    {
+      "audio": "./public/audios/sub_listening.mp3",
+      "optionA": "Room 104",
+      "optionB": "Room 202",
+      "optionC": "Room 315",
+      "optionD": "Room 407",
+      "answer": "C"
+    },
+    {
+      "audio": "./public/audios/sub_listening.mp3",
+      "optionA": "Tuesday",
+      "optionB": "Wednesday",
+      "optionC": "Thursday",
+      "optionD": "Friday",
+      "answer": "C"
+    },
+    {
+      "audio": "./public/audios/sub_listening.mp3",
+      "optionA": "$12",
+      "optionB": "$18",
+      "optionC": "$24",
+      "optionD": "$30",
+      "answer": "C"
+    },
+    {
+      "audio": "./public/audios/sub_listening.mp3",
+      "optionA": "Bus 14",
+      "optionB": "Train A",
+      "optionC": "Taxi",
+      "optionD": "Ride-share",
+      "answer": "B"
+    }
+  ]
+}
