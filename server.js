@@ -44,6 +44,10 @@ app.use(express.static(path.resolve(__dirname, "./public"))); // Serve static fi
 app.use("/api/auth", authRoutes);
 app.use("/api/user", userRoutes);
 app.use("/api/section", sectionRoutes);
+
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "./public", "index.html"));
+});
 // app.use("/api/upload", soundRoutes);
 // app.post("/api/upload/addsound", upload.single("file"), async (req, res) => {
 //   writeFile("umlilo.mp3", req.file.buffer, (err) => {
