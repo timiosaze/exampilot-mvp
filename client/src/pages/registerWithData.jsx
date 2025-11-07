@@ -9,6 +9,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 export const action = async ({ request }) => {
   const formData = await request.formData();
+  document.getElementById("button").disabled = true;
   const data = Object.fromEntries(formData);
   try {
     await customFetch.post("/auth/register", data);
@@ -180,7 +181,9 @@ const registerWithData = () => {
                 <div class="mb-6">
                   <button
                     type="submit"
-                    class="text-white w-full transition-all ease-in-out bg-[#032250] hover:bg-[rgb(2,27,64)] focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-sm px-6 py-3 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                    disabled={false}
+                    id="button"
+                    class="text-white w-full transition-all ease-in-out bg-[#032250] hover:bg-[rgb(2,27,64)] focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-sm px-6 py-3 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     Sign Up
                   </button>

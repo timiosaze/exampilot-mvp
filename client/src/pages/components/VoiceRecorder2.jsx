@@ -33,7 +33,7 @@ const VoiceRecorder2 = ({ index, question, audioSaved }) => {
         const mediaRecorder = new MediaRecorder(stream);
         const record = document.getElementById("start");
         const stop = document.getElementById("stop");
-        const time = 10;
+        const time = 60;
         let count = 0;
 
         let intervalId;
@@ -59,6 +59,7 @@ const VoiceRecorder2 = ({ index, question, audioSaved }) => {
           record.style.color = "";
           clearInterval(intervalId);
           intervalId = null;
+          setRecordingTime(0);
         }
 
         record.onclick = () => {
@@ -135,7 +136,7 @@ const VoiceRecorder2 = ({ index, question, audioSaved }) => {
           style={{ width: `${recordingTime * 4}px` }}
         ></div>
       </div>
-      <p>{recordingTime == 10 ? "Saved" : ""}</p>
+      <p>{recordingTime == 60 ? "Saved" : ""}</p>
       <div id="div"></div>
     </div>
   );

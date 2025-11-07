@@ -6,6 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 const resetPassword = () => {
   const action = async (formData) => {
+    document.getElementById("button").disabled = true;
     try {
       const email = formData.get("email");
       await customFetch.post("/auth/forgot-password", { email: email });
@@ -14,6 +15,7 @@ const resetPassword = () => {
       toast.error(error.message);
     }
   };
+
   return (
     <section class="bg-slate-100 font-sans">
       <div class="flex">
@@ -83,7 +85,9 @@ const resetPassword = () => {
                 <div class="mb-6">
                   <button
                     type="submit"
-                    class="text-white w-full transition-all ease-in-out bg-[#032250] hover:bg-[rgb(2,27,64)] focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-sm px-6 py-3 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                    id="button"
+                    disabled={false}
+                    class="text-white w-full transition-all ease-in-out bg-[#032250] hover:bg-[rgb(2,27,64)] focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-sm px-6 py-3 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     Reset password
                   </button>

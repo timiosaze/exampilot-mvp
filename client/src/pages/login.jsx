@@ -7,6 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 export const action = async ({ request }) => {
   const formData = await request.formData();
+  document.getElementById("button").disabled = true;
   const data = Object.fromEntries(formData);
   try {
     await customFetch.post("/auth/login", data);
@@ -20,6 +21,7 @@ export const action = async ({ request }) => {
 
 const login = () => {
   const [showPassword, setShowPassword] = useState(false);
+
   return (
     <section class="bg-slate-200 font-sans">
       <div class="flex h-screen">
@@ -160,8 +162,10 @@ const login = () => {
                 </div>
                 <div class="">
                   <button
+                    disabled={false}
+                    id="button"
                     type="submit"
-                    class="text-white w-full transition-all ease-in-out bg-[#032250] hover:bg-[rgb(2,27,64)] focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-sm px-6 py-3 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                    class="text-white w-full transition-all ease-in-out bg-[#032250] hover:bg-[rgb(2,27,64)] focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-sm px-6 py-3 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     Login
                   </button>

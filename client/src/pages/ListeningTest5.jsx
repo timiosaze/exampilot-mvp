@@ -22,7 +22,7 @@ const ListeningTest5 = () => {
           </div>
           <div className="h-[600px]  bg-[#EDEDED] flex flex-col overflow-y-scroll ">
             <div className="mt-6 mb-4 mr-10">
-              <Button className="float-right rounded-none hover:bg-[#200943]/50 bg-[#200943] text-sm p-2">
+              <Button className="float-right text-slate-50 rounded-none hover:bg-[#200943]/50 bg-[#200943] text-sm p-2">
                 NEXT
               </Button>
             </div>
@@ -36,10 +36,7 @@ const ListeningTest5 = () => {
                 </div>
                 <div>
                   <audio controls>
-                    <source
-                      src="./public/audios/a.mp3"
-                      type="audio/mp3"
-                    ></source>
+                    <source src="public/audios/a.mp3" type="audio/mp3"></source>
                     Playing ...
                   </audio>
                 </div>

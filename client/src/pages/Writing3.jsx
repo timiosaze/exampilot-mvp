@@ -57,11 +57,17 @@ const Writing3 = () => {
               Practice Test A-Writing Task 1-Writting an E-mail
             </p>
             <p className="text-white text-sm leading-17 mr-8">
-              Time remaining:{" "}
+              Time:{" "}
               <span className="text-[15px] font-bold text-red-700 ml-3">
-                25:00
+                50 minutes
               </span>
             </p>
+            <Button
+              onClick={submitEssay}
+              className="float-right rounded-none mr-8 hover:bg-[#200943]/50 bg-gray-600 text-sm p-2"
+            >
+              NEXT
+            </Button>
           </div>
           <div className="h-[600px] w-full  bg-[#EDEDED] overflow-scroll">
             <div className="max-h-[600px] grid grid-cols-2 gap-6">
@@ -78,15 +84,6 @@ const Writing3 = () => {
                 </p>
               </div>
               <div className="h-[500px] overflow-auto my-10 py-4 mx-4 xl:mx-8">
-                <div className="mr-10 mb-2">
-                  <Button
-                    onClick={submitEssay}
-                    className="float-right rounded-none hover:bg-[#200943]/50 bg-[#200943] text-sm p-2"
-                  >
-                    NEXT
-                  </Button>
-                  <div className="clear-right"></div>
-                </div>
                 <p className="text-sm text-[#525866] mb-4">Question 1 of 2</p>
                 <div class="inline-flex  mb-4">
                   <CircleAlert className="w-5 h-5 mr-2" />

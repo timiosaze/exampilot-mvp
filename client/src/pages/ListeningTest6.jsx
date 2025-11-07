@@ -87,13 +87,18 @@ const ListeningTest6 = () => {
             <p className="text-white text-lg  font-bold leading-17 ml-8">
               Practice Test A - Listening Test
             </p>
-            <p className="text-white text-sm leading-17 ml-8"></p>
+            <p className="text-white text-sm leading-17 mr-8">
+              Time:{" "}
+              <span className="text-[15px] font-bold text-red-700">
+                50 minutes
+              </span>
+            </p>
           </div>
           <div className="h-[600px]  bg-[#EDEDED] flex flex-col overflow-y-scroll ">
             <div className="mt-6 mb-4 mr-10">
               <Button
                 onClick={nextQuestion}
-                className="float-right rounded-none hover:bg-[#200943]/50 bg-[#200943] text-sm p-2"
+                className="float-right text-slate-50 rounded-none hover:bg-[#200943]/50 bg-[#200943] text-sm p-2"
               >
                 NEXT
               </Button>
@@ -107,7 +112,10 @@ const ListeningTest6 = () => {
                   </p>
                 </div>
                 <div>
-                  <audio controls src={questions[key].audio}></audio>
+                  <audio
+                    controls
+                    src="public/audios/listening_question.mp3"
+                  ></audio>
                 </div>
               </div>
               <form action={submit}>

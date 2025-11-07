@@ -7,6 +7,9 @@ const Reading2 = () => {
   function next() {
     window.location.href = "/reading-3";
   }
+  function prev() {
+    window.location.href = "/reading";
+  }
   return (
     <div className="relative">
       <DashNavbar2 />
@@ -40,7 +43,10 @@ const Reading2 = () => {
               </Button>
             </div>
             <div className="mt-10 mr-10">
-              <Button className="float-right rounded-none bg-red-600 hover:bg-red-800 text-sm p-2">
+              <Button
+                onClick={prev}
+                className="float-right rounded-none bg-red-600 hover:bg-red-800 text-sm p-2"
+              >
                 BACK
               </Button>
             </div>

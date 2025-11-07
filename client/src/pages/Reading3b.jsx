@@ -55,6 +55,9 @@ const Reading3 = () => {
     document.getElementById("submit").click();
     window.location.href = "/reading-3c";
   }
+  function prev() {
+    window.location.href = "/reading-3a";
+  }
   return (
     <div className="relative">
       <DashNavbar2 />
@@ -66,9 +69,17 @@ const Reading3 = () => {
               Practice Test A - Reading Part 3: Reading for Information
             </p>
             <p className="text-white text-sm leading-17 mr-8">
-              Time remaining:{" "}
-              <span className="text-[15px] font-bold text-red-700">00:30</span>
+              Time:{" "}
+              <span className="text-[15px] font-bold text-red-700 ml-3">
+                50 minutes
+              </span>
             </p>
+            <Button
+              onClick={submitSession}
+              className="float-right rounded-none mr-8 hover:bg-[#200943]/50 bg-gray-600 text-sm p-2"
+            >
+              NEXT
+            </Button>
           </div>
           <div className="h-[600px] w-full  bg-[#EDEDED] overflow-scroll">
             <div className="max-h-[600px] grid grid-cols-2 gap-6">
@@ -128,7 +139,10 @@ const Reading3 = () => {
                     Submit
                   </button>
                 </form>
-                <Button className="float-right rounded-none bg-red-600 hover:bg-red-800 mr-10 text-sm p-2">
+                <Button
+                  onClick={prev}
+                  className="float-right rounded-none bg-red-600 hover:bg-red-800 mr-10 text-sm p-2"
+                >
                   BACK
                 </Button>
               </div>
