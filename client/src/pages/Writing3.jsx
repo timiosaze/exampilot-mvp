@@ -1,7 +1,7 @@
 import DashNavbar2 from "./layout/DashNavbar2";
 import { Button } from "flowbite-react";
 import { CircleAlert } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Editor } from "@tinymce/tinymce-react";
 import { useLoaderData } from "react-router";
 import customFetch from "../../../utils/customFetch";
@@ -14,6 +14,35 @@ export async function loader() {
 
 const Writing3 = () => {
   const writing = useLoaderData();
+  let minutes = 25;
+  let count = 60;
+  let seconds = minutes * count;
+  const [sec, setSec] = useState(seconds);
+  const [minuteHand, setMinuteHand] = useState(Math.floor(seconds / 60));
+  let intervalId;
+  function startInterval() {
+    intervalId ??= setInterval(startTiming, 1000);
+  }
+
+  function startTiming() {
+    if (seconds > 0) {
+      seconds--;
+      let min = Math.floor(seconds / 60);
+      setSec(seconds);
+      setMinuteHand(min);
+    } else {
+      stopTimer();
+    }
+  }
+
+  function stopTimer() {
+    clearInterval(intervalId);
+    // release our intervalId from the variable
+    intervalId = null;
+  }
+  useEffect(() => {
+    startInterval(); // Call your function inside useEffect
+  }, []); //
   const index = 0;
   const question =
     "The question is " +
@@ -59,7 +88,7 @@ const Writing3 = () => {
             <p className="text-white text-sm leading-17 mr-8">
               Time:{" "}
               <span className="text-[15px] font-bold text-red-700 ml-3">
-                50 minutes
+                {minuteHand} minutes
               </span>
             </p>
             <Button

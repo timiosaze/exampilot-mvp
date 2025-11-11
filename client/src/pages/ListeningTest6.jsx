@@ -16,6 +16,38 @@ export async function loader() {
 
 const ListeningTest6 = () => {
   const [key, setKey] = useState(0);
+  // let minutes = 2;
+  let count = 30;
+  let seconds = count;
+  const [sec, setSec] = useState(seconds);
+  // const [minuteHand, setMinuteHand] = useState(Math.floor(seconds / 60));
+  const [secondHand, setSecondHand] = useState(
+    String(seconds % 60).padStart(2, "0")
+  );
+  let intervalId;
+  function startInterval() {
+    intervalId ??= setInterval(startTiming, 1000);
+  }
+
+  function startTiming() {
+    if (seconds > 0) {
+      seconds--;
+      let sec = String(seconds % 60).padStart(2, "0");
+      setSec(seconds);
+      setSecondHand(sec);
+    } else {
+      stopTimer();
+    }
+  }
+
+  function stopTimer() {
+    clearInterval(intervalId);
+    // release our intervalId from the variable
+    intervalId = null;
+  }
+  useEffect(() => {
+    startInterval(); // Call your function inside useEffect
+  }, []); //
   let all_questions = useLoaderData();
   let user_option = [];
   const [questions, setQuestions] = useState(all_questions);
@@ -59,6 +91,7 @@ const ListeningTest6 = () => {
   };
 
   const nextQuestion = () => {
+    startInterval();
     if (key >= 0 && key < 7) {
       setKey(key + 1);
     } else {
@@ -67,6 +100,7 @@ const ListeningTest6 = () => {
     }
   };
   const prevQuestion = () => {
+    startInterval();
     if (key > 0 && key < 8) {
       setKey(key - 1);
     } else {
@@ -90,7 +124,7 @@ const ListeningTest6 = () => {
             <p className="text-white text-sm leading-17 mr-8">
               Time:{" "}
               <span className="text-[15px] font-bold text-red-700">
-                50 minutes
+                {secondHand} minutes
               </span>
             </p>
           </div>

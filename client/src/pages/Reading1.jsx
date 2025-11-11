@@ -8,7 +8,7 @@ const Reading1 = () => {
     window.location.href = "/reading-2";
   }
   function prev() {
-    window.location.href = "/";
+    window.location.href = "/dashboard";
   }
   return (
     <div className="relative">

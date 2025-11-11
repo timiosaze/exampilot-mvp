@@ -5,7 +5,7 @@ import { useState } from "react";
 
 const Speaking1 = () => {
   function prev() {
-    window.location.href = "/";
+    window.location.href = "/dashboard";
   }
   function next() {
     window.location.href = "/speaking-2";

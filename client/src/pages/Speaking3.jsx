@@ -14,6 +14,35 @@ export const loader = async () => {
 
 const Speaking3 = () => {
   const questions = useLoaderData();
+  let minutes = 12;
+  let count = 60;
+  let seconds = minutes * count;
+  const [sec, setSec] = useState(seconds);
+  const [minuteHand, setMinuteHand] = useState(Math.floor(seconds / 60));
+  let intervalId;
+  function startInterval() {
+    intervalId ??= setInterval(startTiming, 1000);
+  }
+
+  function startTiming() {
+    if (seconds > 0) {
+      seconds--;
+      let min = Math.floor(seconds / 60);
+      setSec(seconds);
+      setMinuteHand(min);
+    } else {
+      stopTimer();
+    }
+  }
+
+  function stopTimer() {
+    clearInterval(intervalId);
+    // release our intervalId from the variable
+    intervalId = null;
+  }
+  useEffect(() => {
+    startInterval(); // Call your function inside useEffect
+  }, []); //
   // let count = 1;
   const [questionNo, setQuestionNo] = useState(1);
   const [isDisabled, setIsDisabled] = useState(true);
@@ -54,7 +83,7 @@ const Speaking3 = () => {
             <p className="text-white text-sm leading-17 mr-8">
               Time:{" "}
               <span className="text-[15px] font-bold text-red-700">
-                60 seconds
+                {minuteHand} minutes
               </span>
             </p>
           </div>

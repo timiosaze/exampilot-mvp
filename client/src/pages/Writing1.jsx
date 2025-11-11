@@ -8,7 +8,7 @@ const Writing1 = () => {
     window.location.href = "/writing-2";
   }
   function prev() {
-    window.location.href = "/";
+    window.location.href = "/dashboard";
   }
   return (
     <div className="relative">
@@ -54,7 +54,10 @@ const Writing1 = () => {
               </ol>
             </div>
             <div className="mt-10 mr-10">
-              <Button className="float-right rounded-none bg-red-600 hover:bg-red-800 text-sm p-2">
+              <Button
+                onClick={prev}
+                className="float-right rounded-none bg-red-600 hover:bg-red-800 text-sm p-2"
+              >
                 BACK
               </Button>
             </div>
