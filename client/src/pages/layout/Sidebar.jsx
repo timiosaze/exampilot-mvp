@@ -8,6 +8,7 @@ import {
 import { LogOut, Sidebar } from "lucide-react";
 import { useState } from "react";
 import React from "react";
+import { Link } from "react-router";
 
 const SideBar = ({ sideBarCollapsed, onToggle, currentPage, onPageChange }) => {
   return (
@@ -19,10 +20,14 @@ const SideBar = ({ sideBarCollapsed, onToggle, currentPage, onPageChange }) => {
       <div className="">
         <div class="h-16 flex items-center border-slate-300">
           <div className="pl-4">
-            <img src="./public/pictures/Original.png" alt="" />
+            <Link to="/">
+              <img src="./public/pictures/Original.png" alt="" />
+            </Link>
           </div>
           <div>
-            <p className="text-[#200943] font-bold text-xl">Brand</p>
+            <Link to="/" className="text-[#200943] font-bold text-xl">
+              Brand
+            </Link>
           </div>
           <div></div>
         </div>

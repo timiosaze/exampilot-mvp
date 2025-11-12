@@ -7,11 +7,16 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import { redirect } from "react-router";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Home = () => {
   const [practiceTime, setPracticeTime] = useState("30");
   const directToTestSection = (formData) => {
     const test_section = formData.get("test_section");
+    if (test_section == null) {
+      toast.error("No section chosen");
+    }
     // alert(test_section);
     switch (test_section) {
       case "listening":

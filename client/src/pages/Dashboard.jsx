@@ -22,7 +22,7 @@ import DashNavbar from "./layout/DashNavbar";
 import Home from "./dashboard/Home";
 import Profile from "./dashboard/Profile";
 import Performance from "./dashboard/Performance";
-import { redirect, useLoaderData } from "react-router";
+import { redirect, useLoaderData, Link } from "react-router";
 import customFetch from "../../../utils/customFetch.js";
 import { logout } from "./logout.js";
 
@@ -65,12 +65,15 @@ const Dashboard = () => {
           <div className="">
             <div class="h-16 flex items-center border-slate-300">
               <div className="pl-4">
-                <img src="./public/pictures/Original.png" alt="" />
+                <a href="/">
+                  <img src="./public/pictures/Original.png" alt="" />
+                </a>
               </div>
               <div>
-                <p className="text-[#200943] font-bold text-xl">Brand</p>
+                <a href="/" className="text-[#200943] font-bold text-xl">
+                  Brand
+                </a>
               </div>
-              <div></div>
             </div>
             <div className="mb-2 mx-4 text-gray-900">
               <button

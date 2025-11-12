@@ -81,7 +81,7 @@ const Writing4 = () => {
     <div className="relative">
       <DashNavbar2 />
 
-      <div class="bg-[url(./public/pictures/listening1.png)] bg-no-repeat bg-fixed h-screen w-full absolute top-0 left-0 -z-10 ">
+      <div class="bg-[url(public/pictures/listening1.png)] bg-no-repeat bg-fixed h-screen w-full absolute top-0 left-0 -z-10 ">
         <div className=" max-w-[1086px] w-full z-10 m-auto mt-25">
           <div className="h-[67px] bg-[#200943] shadow-md flex items-center justify-between text-lg shadow-black mt-10 xl:mt-0">
             <p className="text-white text-lg font-bold leading-17 ml-8">

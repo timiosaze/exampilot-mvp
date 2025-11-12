@@ -14,9 +14,10 @@ export const action = async ({ request }) => {
   try {
     await customFetch.post("/auth/register", data);
     toast.success("Registration Successful");
-    return redirect("/");
+    window.location.href = "/";
   } catch (error) {
     toast.error(error?.response?.data?.msg);
+    document.getElementById("button").disabled = false;
     return error;
   }
 };

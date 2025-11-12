@@ -15,6 +15,7 @@ export const action = async ({ request }) => {
     window.location.href = "/";
   } catch (error) {
     toast.error(error?.response?.data?.msg);
+    document.getElementById("button").disabled = false;
     return error;
   }
 };
