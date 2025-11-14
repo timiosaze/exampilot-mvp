@@ -51,7 +51,7 @@ export const saveSingleSpeech = async (req, res) => {
   const transcript = await client.transcripts.transcribe(params);
   console.log(transcript.text);
   const essay =
-    "You are a CELPIP Writing examiner. Grade the following response on a scale of 1–12 for each criterion: 1.⁠ ⁠Content/Coherence 2.⁠ ⁠Vocabulary 3.⁠Readability/Grammar 4.⁠ ⁠Task Fulfillment. " +
+    "You are a CELPIP Speaking examiner. Grade the following response on a scale of 1–12 for each criterion: 1.⁠ ⁠Content/Coherence 2.⁠ ⁠Vocabulary 3.⁠Readability/Grammar 4.⁠ ⁠Task Fulfillment. " +
     body +
     " " +
     transcript.text +

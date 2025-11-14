@@ -5,6 +5,8 @@ import React, { useState, useRef, useEffect } from "react";
 import VoiceRecorder2 from "./components/VoiceRecorder2";
 import customFetch from "../../../utils/customFetch.js";
 import { useLoaderData } from "react-router";
+import Timer from "./components/timer.jsx";
+import imgUrl from "./listening1.png";
 
 export const loader = async () => {
   return await customFetch
@@ -14,38 +16,9 @@ export const loader = async () => {
 
 const Speaking3 = () => {
   const questions = useLoaderData();
-  let minutes = 12;
-  let count = 60;
-  let seconds = minutes * count;
-  const [sec, setSec] = useState(seconds);
-  const [minuteHand, setMinuteHand] = useState(Math.floor(seconds / 60));
-  let intervalId;
-  function startInterval() {
-    intervalId ??= setInterval(startTiming, 1000);
-  }
-
-  function startTiming() {
-    if (seconds > 0) {
-      seconds--;
-      let min = Math.floor(seconds / 60);
-      setSec(seconds);
-      setMinuteHand(min);
-    } else {
-      stopTimer();
-    }
-  }
-
-  function stopTimer() {
-    clearInterval(intervalId);
-    // release our intervalId from the variable
-    intervalId = null;
-  }
-  useEffect(() => {
-    startInterval(); // Call your function inside useEffect
-  }, []); //
-  // let count = 1;
   const [questionNo, setQuestionNo] = useState(1);
-  const [isDisabled, setIsDisabled] = useState(true);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isDisabled, setIsDisabled] = useState(false);
   const question = "The question is " + questions[questionNo - 1].prompt;
   const next = () => {
     if (questionNo >= 1 && questionNo < 8) {
@@ -73,7 +46,10 @@ const Speaking3 = () => {
     <div className="relative">
       <DashNavbar2 />
 
-      <div class="bg-[url(public/pictures/listening1.png)] bg-no-repeat bg-fixed h-screen w-full absolute top-0 left-0 -z-10 ">
+      <div
+        style={{ backgroundImage: `url("${imgUrl}")` }}
+        class=" bg-no-repeat bg-fixed h-screen w-full absolute top-0 left-0 -z-10 "
+      >
         <div className=" max-w-[1086px] w-full z-10 m-auto mt-25">
           <div className="h-[67px] bg-[#200943] shadow-md flex items-center justify-between shadow-black mt-10 xl:mt-0">
             <p className="text-white text-lg font-bold leading-17 ml-8">
@@ -81,15 +57,13 @@ const Speaking3 = () => {
               {questions[questionNo - 1].title}
             </p>
             <p className="text-white text-sm leading-17 mr-8">
-              Time:{" "}
-              <span className="text-[15px] font-bold text-red-700">
-                {minuteHand} minutes
-              </span>
+              Time: <Timer minute={12} />
             </p>
           </div>
           <div className="h-[600px]  bg-[#EDEDED] flex flex-col overflow-y-scroll ">
             <div className="mt-10 mr-10">
               <Button
+                disabled={isDisabled}
                 onClick={next}
                 className="float-right rounded-none hover:bg-[#200943]/50 bg-[#200943] text-sm p-2"
               >
@@ -106,7 +80,12 @@ const Speaking3 = () => {
                 </p>
               </div>
               <div>
-                <VoiceRecorder2 index={questionNo - 1} question={question} />
+                <VoiceRecorder2
+                  index={questionNo - 1}
+                  question={question}
+                  disableTrue={() => setIsDisabled(true)}
+                  disableFalse={() => setIsDisabled(false)}
+                />
               </div>
             </div>
             <div className="mt-10 mr-10">

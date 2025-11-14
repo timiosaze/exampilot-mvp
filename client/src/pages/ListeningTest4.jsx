@@ -5,6 +5,8 @@ import { useEffect, useRef, useState } from "react";
 import React from "react";
 import { Link } from "react-router";
 import customFetch from "../../../utils/customFetch.js";
+import imgUrl from "./listening1.png";
+import audioUrl from "./listening_question.mp3";
 
 const ListeningTest4 = () => {
   const [audioLink, setAudioLink] = useState(null);
@@ -22,7 +24,10 @@ const ListeningTest4 = () => {
     <div className="relative">
       <DashNavbar2 />
 
-      <div class="bg-[url(public/pictures/listening1.png)] bg-no-repeat bg-fixed h-screen w-full absolute top-0 left-0 -z-10">
+      <div
+        style={{ backgroundImage: `url("${imgUrl}")` }}
+        class=" bg-no-repeat bg-fixed h-screen w-full absolute top-0 left-0 -z-10"
+      >
         <div className=" max-w-[1086px] w-full z-10 m-auto mt-25">
           <div className="h-[67px] bg-[#200943] shadow-md flex items-center justify-between text-lg shadow-black mt-10 xl:mt-0">
             <p className="text-white text-lg font-bold leading-17 ml-8">
@@ -48,7 +53,7 @@ const ListeningTest4 = () => {
                 </p>
               </div>
               <div>
-                <audio controls src={audioLink}></audio>
+                <audio controls src={audioUrl}></audio>
               </div>
             </div>
             <div className="mt-10 mr-10">

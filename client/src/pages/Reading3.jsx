@@ -4,54 +4,25 @@ import { CircleAlert } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useLoaderData } from "react-router";
 import customFetch from "../../../utils/customFetch";
+import Timer from "./components/timer";
+import imgUrl from "./listening1.png";
 
 export async function loader() {
   return await customFetch
     .get("/section/reading")
     .then((data) => data.data.readingQuestions[0].sectionA);
 }
-
 const Reading3 = () => {
+  // const minutes = 1;
   const questions = useLoaderData();
-  let minutes = 10;
-  let count = 60;
-  let seconds = minutes * count;
-  const [sec, setSec] = useState(seconds);
-  const [minuteHand, setMinuteHand] = useState(Math.floor(seconds / 60));
-  let intervalId;
-  function startInterval() {
-    intervalId ??= setInterval(startTiming, 1000);
-  }
-
-  function startTiming() {
-    if (seconds > 0) {
-      seconds--;
-      let min = Math.floor(seconds / 60);
-      setSec(seconds);
-      setMinuteHand(min);
-    } else {
-      stopTimer();
-    }
-  }
-
-  function stopTimer() {
-    clearInterval(intervalId);
-    // release our intervalId from the variable
-    intervalId = null;
-  }
-  useEffect(() => {
-    startInterval(); // Call your function inside useEffect
-  }, []); //
-  console.log(questions);
   const formatLetterOptions = (array, index) => {
-    const doc = `<select
+    return `<select key=${index}
       name="letter_answer[${index}]"
       class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 my-1"
     >
       <option value="">__________</option>
       ${array.options.map((each) => `<option value=${each}>${each}</option>`)}
     </select>`;
-    return doc;
   };
   async function submit(formData) {
     let index = 0;
@@ -105,17 +76,17 @@ const Reading3 = () => {
     <div className="relative">
       <DashNavbar2 />
 
-      <div class="bg-[url(./public/pictures/listening1.png)] bg-no-repeat bg-fixed h-screen w-full absolute top-0 left-0 -z-10 ">
+      <div
+        style={{ backgroundImage: `url("${imgUrl}")` }}
+        class=" bg-no-repeat bg-fixed h-screen w-full absolute top-0 left-0 -z-10 "
+      >
         <div className=" max-w-[1086px] w-full z-10 m-auto mt-25">
           <div className="h-[67px] bg-[#200943] shadow-md flex items-center justify-between text-lg shadow-black mt-10 xl:mt-0">
             <p className="text-white text-lg font-bold leading-17 ml-8">
               Practice Test A-Reading Task 1: Reading Correspondence
             </p>
             <p className="text-white text-sm leading-17 mr-8">
-              Time:{" "}
-              <span className="text-[15px] font-bold text-red-700 ml-3">
-                {minuteHand} minutes
-              </span>
+              Time: <Timer minute={14} />
             </p>
             <Button
               onClick={submitSession}

@@ -2,6 +2,7 @@ import { Button } from "flowbite-react";
 import DashNavbar2 from "./layout/DashNavbar2";
 
 import { useState } from "react";
+import imgUrl from "./listening1.png";
 
 const Reading2 = () => {
   function next() {
@@ -14,7 +15,10 @@ const Reading2 = () => {
     <div className="relative">
       <DashNavbar2 />
 
-      <div class="bg-[url(public/pictures/listening1.png)] bg-no-repeat bg-fixed h-screen w-full absolute top-0 left-0 -z-10 ">
+      <div
+        style={{ backgroundImage: `url("${imgUrl}")` }}
+        class=" bg-no-repeat bg-fixed h-screen w-full absolute top-0 left-0 -z-10 "
+      >
         <div className=" max-w-[1086px] w-full z-10 m-auto mt-25">
           <div className="h-[67px] bg-[#200943] shadow-md  shadow-black mt-10 xl:mt-0">
             <p className="text-white text-xl font-bold leading-17 ml-8">

@@ -150,7 +150,7 @@ const registerWithData = () => {
                       for="phoneNumber"
                       class="block mb-2 text-sm text-gray-900 dark:text-white"
                     >
-                      Phone number
+                      Phone number (Optional)
                     </label>
                   </div>
                   <ReactPhoneInput

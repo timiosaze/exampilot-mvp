@@ -7,6 +7,9 @@ import customFetch from "../../../utils/customFetch";
 import { useLoaderData } from "react-router";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import imgUrl from "./listening1.png";
+import audioUrl2 from "./sub_listening.mp3";
+import Timer from "./components/timer";
 
 export async function loader() {
   return await customFetch
@@ -16,38 +19,7 @@ export async function loader() {
 
 const ListeningTest6 = () => {
   const [key, setKey] = useState(0);
-  // let minutes = 2;
-  let count = 30;
-  let seconds = count;
-  const [sec, setSec] = useState(seconds);
-  // const [minuteHand, setMinuteHand] = useState(Math.floor(seconds / 60));
-  const [secondHand, setSecondHand] = useState(
-    String(seconds % 60).padStart(2, "0")
-  );
-  let intervalId;
-  function startInterval() {
-    intervalId ??= setInterval(startTiming, 1000);
-  }
 
-  function startTiming() {
-    if (seconds > 0) {
-      seconds--;
-      let sec = String(seconds % 60).padStart(2, "0");
-      setSec(seconds);
-      setSecondHand(sec);
-    } else {
-      stopTimer();
-    }
-  }
-
-  function stopTimer() {
-    clearInterval(intervalId);
-    // release our intervalId from the variable
-    intervalId = null;
-  }
-  useEffect(() => {
-    startInterval(); // Call your function inside useEffect
-  }, []); //
   let all_questions = useLoaderData();
   let user_option = [];
   const [questions, setQuestions] = useState(all_questions);
@@ -91,7 +63,6 @@ const ListeningTest6 = () => {
   };
 
   const nextQuestion = () => {
-    startInterval();
     if (key >= 0 && key < 7) {
       setKey(key + 1);
     } else {
@@ -100,7 +71,6 @@ const ListeningTest6 = () => {
     }
   };
   const prevQuestion = () => {
-    startInterval();
     if (key > 0 && key < 8) {
       setKey(key - 1);
     } else {
@@ -115,17 +85,17 @@ const ListeningTest6 = () => {
     <div className="relative">
       <DashNavbar2 />
 
-      <div class="bg-[url(public/pictures/listening1.png)] bg-no-repeat bg-fixed h-screen w-full absolute top-0 left-0 -z-10">
+      <div
+        style={{ backgroundImage: `url("${imgUrl}")` }}
+        class=" bg-no-repeat bg-fixed h-screen w-full absolute top-0 left-0 -z-10"
+      >
         <div className=" max-w-[1086px] w-full z-10 m-auto mt-25">
           <div className="h-[67px] bg-[#200943] shadow-md flex items-center justify-between shadow-black mt-10 xl:mt-0">
             <p className="text-white text-lg  font-bold leading-17 ml-8">
               Practice Test A - Listening Test
             </p>
             <p className="text-white text-sm leading-17 mr-8">
-              Time:{" "}
-              <span className="text-[15px] font-bold text-red-700">
-                {secondHand} seconds
-              </span>
+              Time: <Timer minute={6} />
             </p>
           </div>
           <div className="h-[600px]  bg-[#EDEDED] flex flex-col overflow-y-scroll ">
@@ -146,10 +116,7 @@ const ListeningTest6 = () => {
                   </p>
                 </div>
                 <div>
-                  <audio
-                    controls
-                    src="public/audios/listening_question.mp3"
-                  ></audio>
+                  <audio controls src={audioUrl2}></audio>
                 </div>
               </div>
               <form action={submit}>

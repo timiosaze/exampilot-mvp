@@ -4,6 +4,8 @@ import { CircleAlert } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useLoaderData } from "react-router";
 import customFetch from "../../../utils/customFetch";
+import Timer from "./components/timer";
+import imgUrl from "./listening1.png";
 
 export async function loader() {
   return await customFetch
@@ -13,35 +15,6 @@ export async function loader() {
 
 const Reading3 = () => {
   const questions = useLoaderData();
-  let minutes = 10;
-  let count = 60;
-  let seconds = minutes * count;
-  const [sec, setSec] = useState(seconds);
-  const [minuteHand, setMinuteHand] = useState(Math.floor(seconds / 60));
-  let intervalId;
-  function startInterval() {
-    intervalId ??= setInterval(startTiming, 1000);
-  }
-
-  function startTiming() {
-    if (seconds > 0) {
-      seconds--;
-      let min = Math.floor(seconds / 60);
-      setSec(seconds);
-      setMinuteHand(min);
-    } else {
-      stopTimer();
-    }
-  }
-
-  function stopTimer() {
-    clearInterval(intervalId);
-    // release our intervalId from the variable
-    intervalId = null;
-  }
-  useEffect(() => {
-    startInterval(); // Call your function inside useEffect
-  }, []); //
   const formatArticleOptions = (array, index) => {
     const doc = `<select
       name="article_answer[${index}]"
@@ -125,17 +98,17 @@ const Reading3 = () => {
     <div className="relative">
       <DashNavbar2 />
 
-      <div class="bg-[url(public/pictures/listening1.png)] bg-no-repeat bg-fixed h-screen w-full absolute top-0 left-0 -z-10 ">
+      <div
+        style={{ backgroundImage: `url("${imgUrl}")` }}
+        class=" bg-no-repeat bg-fixed h-screen w-full absolute top-0 left-0 -z-10 "
+      >
         <div className=" max-w-[1086px] w-full z-10 m-auto mt-25">
           <div className="h-[67px] bg-[#200943] shadow-md flex items-center justify-between text-lg shadow-black mt-10 xl:mt-0">
             <p className="text-white text-lg font-bold leading-17 ml-8">
               Practice Test A - Reading Part 4: Reading for Viewpoints
             </p>
             <p className="text-white text-sm leading-17 mr-8">
-              Time:{" "}
-              <span className="text-[15px] font-bold text-red-700 ml-3">
-                {minuteHand} minutes
-              </span>
+              Time: <Timer minute={14} />
             </p>
             <Button
               onClick={submitSession}
@@ -158,14 +131,6 @@ const Reading3 = () => {
                 ))}
               </div>
               <div className="h-[500px] overflow-auto my-10 py-4 mx-4 xl:mx-8">
-                <div className="mr-10 mb-2">
-                  <Button
-                    onClick={submitSession}
-                    className="float-right rounded-none hover:bg-[#200943]/50 bg-[#200943] text-sm p-2"
-                  >
-                    NEXT
-                  </Button>
-                </div>
                 <form action={submit}>
                   <div class="inline-flex items-center mb-4">
                     <CircleAlert className="w-5 h-5 mr-6 ml-6" />

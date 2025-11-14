@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import customFetch from "../../../../utils/customFetch";
 import { data } from "react-router";
-import fs from "fs";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { Buffer } from "buffer";
 // import { AudioContext } from "web-audio-api";
 
-const VoiceRecorder2 = ({ index, question, audioSaved }) => {
+const VoiceRecorder2 = ({ index, question, disableTrue, disableFalse }) => {
   // Assuming 'audioBuffer' is your AudioBuffer object
   const [recordingTime, setRecordingTime] = useState(0);
 
@@ -12,7 +14,9 @@ const VoiceRecorder2 = ({ index, question, audioSaved }) => {
     // create a new handle
     try {
       const array = await blob.arrayBuffer();
-      const buffer = Buffer.from(array);
+      const buffer = await Buffer.from(array);
+      document.getElementById("disableFalse").click();
+
       await customFetch.post("/section/speech", {
         data: buffer,
         index: index,
@@ -59,6 +63,9 @@ const VoiceRecorder2 = ({ index, question, audioSaved }) => {
           record.style.color = "";
           clearInterval(intervalId);
           intervalId = null;
+
+          toast.success("Speech saved successfully");
+
           setRecordingTime(0);
         }
 
@@ -104,6 +111,7 @@ const VoiceRecorder2 = ({ index, question, audioSaved }) => {
         <button
           type="button"
           id="start"
+          onClick={disableTrue}
           class="text-white inline-flex items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-md px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
         >
           <svg
@@ -123,13 +131,14 @@ const VoiceRecorder2 = ({ index, question, audioSaved }) => {
           Start
         </button>
       </div>
-      {/* <button
+      <button
+        onClick={disableFalse}
         type="button"
-        id="stop"
-        class="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+        id="disableFalse"
+        class="py-2.5 hidden px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
       >
         Submit
-      </button> */}
+      </button>
       <div className="w-70 p-6 flex items-center border-2 border-gray-500 rounded-xl">
         <div
           className="h-5 bg-primary-600"
