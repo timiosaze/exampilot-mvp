@@ -6,6 +6,10 @@ import { Link } from "react-router";
 import imgUrl from "./listening1.png";
 
 const ListeningTest1 = () => {
+  const home = () => {
+    sessionStorage.setItem("homepage", "home");
+    window.location.href = "/dashboard";
+  };
   return (
     <div className="relative">
       <DashNavbar2 />
@@ -62,12 +66,12 @@ const ListeningTest1 = () => {
               </ol>
             </div>
             <div className="mt-10 mr-10">
-              <Link
-                to="/dashboard"
+              <button
+                onClick={home}
                 className="float-right rounded-none bg-red-600 hover:bg-red-800 text-sm p-2"
               >
                 BACK
-              </Link>
+              </button>
             </div>
           </div>
         </div>

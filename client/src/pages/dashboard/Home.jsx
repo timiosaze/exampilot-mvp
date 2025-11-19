@@ -48,7 +48,7 @@ const Home = () => {
         <p className="font-bold text-2xl mb-2 mt-6">Choose your practice</p>
         <p className="text-sm">
           Select a mode to prepare for your{" "}
-          <span className="font-bold">IELTS Academy</span> test.
+          <span className="font-bold">CELPIP Academy</span> test.
         </p>
       </div>
       <div class="grid grid-flow-col grid-cols-2  gap-4 mx-20 ">

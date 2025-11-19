@@ -5,9 +5,10 @@ import { useState } from "react";
 import imgUrl from "./listening1.png";
 
 const Speaking1 = () => {
-  function prev() {
+  const home = () => {
+    sessionStorage.setItem("homepage", "home");
     window.location.href = "/dashboard";
-  }
+  };
   function next() {
     window.location.href = "/speaking-2";
   }
@@ -71,7 +72,7 @@ const Speaking1 = () => {
             </div>
             <div className="mt-10 mr-10">
               <Button
-                onClick={prev}
+                onClick={home}
                 className="float-right rounded-none bg-red-600 hover:bg-red-800 text-sm p-2"
               >
                 BACK

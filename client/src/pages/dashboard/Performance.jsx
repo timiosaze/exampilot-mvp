@@ -5,7 +5,8 @@ import StatsGrid from "./StatsGrid";
 import GradeChart from "./GradeChart";
 import DetailedSkill from "./DetailedSkill";
 import { getInitials } from "./getInitials.js";
-const Performance = ({ username, testResults }) => {
+import { redirect } from "react-router";
+const Performance = ({ username, testResults, onHome }) => {
   return (
     <div className="flex flex-1 overflow-y-auto flex-col w-full">
       <div className="flex  items-center justify-between  lg:mx-12 mx-4 mt-6 mb-4">
@@ -25,9 +26,6 @@ const Performance = ({ username, testResults }) => {
         </div>
         <div className="inline-flex space-x-2 py-2 px-3 rounded-full shadow-lg ">
           <button className="text-sm font-semibold rounded-full py-1 px-2 bg-gray-900 text-white">
-            IELTS
-          </button>
-          <button className="text-sm font-semibold rounded-full py-1 px-2 hover:bg-gray-900 hover:text-white">
             CELPIP
           </button>
         </div>
@@ -42,14 +40,16 @@ const Performance = ({ username, testResults }) => {
                   Your Kickoff Practice
                 </p>
                 <p className="text-sm/4 font-medium text-[#7E7E7E]">
-                  Your lowest area is Writing Task 2 (Essay). Let's focus here
-                  to see the biggest improvement.
+                  Let's focus here to see the biggest improvement.
                 </p>
               </div>
             </div>
             <div>
-              <button className="bg-[#FF7008] text-[#21005D] font-medium text-sm lg:text-xl p-3 hover:bg-[#FF7008]/50 rounded-lg">
-                Start Practice (1 hour)
+              <button
+                onClick={onHome}
+                className="bg-[#FF7008] text-[#21005D] font-medium text-sm lg:text-xl p-3 hover:bg-[#FF7008]/50 rounded-lg"
+              >
+                Start Practice
               </button>
             </div>
           </div>

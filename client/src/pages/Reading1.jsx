@@ -8,9 +8,10 @@ const Reading1 = () => {
   function next() {
     window.location.href = "/reading-2";
   }
-  function prev() {
+  const home = () => {
+    sessionStorage.setItem("homepage", "home");
     window.location.href = "/dashboard";
-  }
+  };
   return (
     <div className="relative">
       <DashNavbar2 />
@@ -66,7 +67,7 @@ const Reading1 = () => {
             </div>
             <div className="mt-10 mr-10">
               <Button
-                onClick={prev}
+                onClick={home}
                 className="float-right rounded-none bg-red-600 hover:bg-red-800 text-sm p-2"
               >
                 BACK

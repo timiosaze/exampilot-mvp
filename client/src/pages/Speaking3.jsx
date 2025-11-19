@@ -7,7 +7,7 @@ import customFetch from "../../../utils/customFetch.js";
 import { useLoaderData } from "react-router";
 import Timer from "./components/timer.jsx";
 import imgUrl from "./listening1.png";
-
+import imgUrl2 from "./speaking.jpg";
 export const loader = async () => {
   return await customFetch
     .get("/section/speaking")
@@ -38,6 +38,8 @@ const Speaking3 = () => {
   const nextLocation = () => {
     if (sessionStorage.getItem("fullTest")) {
       sessionStorage.removeItem("fullTest");
+      window.location.href = "/dashboard";
+    } else {
       window.location.href = "/dashboard";
     }
   };
@@ -79,6 +81,13 @@ const Speaking3 = () => {
                   {questions[questionNo - 1].prompt}
                 </p>
               </div>
+              {questions[questionNo - 1].image ? (
+                <div className="flex justify-center items-center mb-4">
+                  <img src={imgUrl2} alt="" className="w-[45%]" />
+                </div>
+              ) : (
+                ""
+              )}
               <div>
                 <VoiceRecorder2
                   index={questionNo - 1}

@@ -43,12 +43,22 @@ const Dashboard = () => {
       setEmail(user.data.user._doc.email);
     });
   }, [username, email]);
-
+  if (sessionStorage.getItem("homepage")) {
+    let page = sessionStorage.getItem("homepage");
+    setCurrentPage(page);
+    sessionStorage.removeItem("homepage");
+  }
   const switchPage = (currentPage) => {
     if (currentPage === "home") {
       return <Home />;
     } else if (currentPage === "performance") {
-      return <Performance username={username} testResults={testResults} />;
+      return (
+        <Performance
+          username={username}
+          testResults={testResults}
+          onHome={() => setCurrentPage("home")}
+        />
+      );
     } else if (currentPage === "profile") {
       return <Profile username={username} email={email} />;
     }
@@ -120,15 +130,6 @@ const Dashboard = () => {
         </div> */}
           </div>
           <div className="flex flex-col">
-            <div className="mb-2 mx-4 text-gray-900">
-              <a
-                href="#"
-                className="inline-flex items-center font-medium text-[13px] hover:bg-[#200943] hover:text-white w-full py-3 px-4 rounded-md"
-              >
-                <Cog8ToothIcon className="w-5 h-5 mr-2 " />
-                Settings
-              </a>
-            </div>{" "}
             <div className="mb-2 mx-4 text-gray-900">
               <form action={logout}>
                 <button
